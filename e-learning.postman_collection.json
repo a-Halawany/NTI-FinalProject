@@ -1,0 +1,788 @@
+{
+	"info": {
+		"_postman_id": "9bf07927-edf4-47c7-b43b-3115ae96c85c",
+		"name": "e-learning",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "delMainSubject",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/admin/delMainSubject/61e9597e16523f23948c1449",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"delMainSubject",
+								"61e9597e16523f23948c1449"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addSubject",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Math\",\r\n    \"description\":\"test test test test test\",\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/admin/addSubject",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"addSubject"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Teachers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/admin/teachers",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"teachers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "single Teacher",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/admin/teacher/T61ed7d28e53a571e112e9636",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"teacher",
+								"T61ed7d28e53a571e112e9636"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"admin@admin.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/admin/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addSubject-teacher",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/admin/addSubject-teacher/T61ed7d28e53a571e112e9636/61ed7e17fb2ac0f647b19c71",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"addSubject-teacher",
+								"T61ed7d28e53a571e112e9636",
+								"61ed7e17fb2ac0f647b19c71"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "block-teacher",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "AeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWVhYWRkYjY2YzU4MTY3MWYxZDA3YWUiLCJpYXQiOjE2NDM0OTc1OTF9.Pa0tAwr8arqvlBw-UrU6aSTzsaoP3VpvNNnM0lXS0_Y",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{link}}/admin/block-teacher/61f17f0e1229f0dacb41380b",
+							"host": [
+								"{{link}}"
+							],
+							"path": [
+								"admin",
+								"block-teacher",
+								"61f17f0e1229f0dacb41380b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "active-teacher",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{link}}/admin/active-teacher/61f17f0e1229f0dacb41380b",
+							"host": [
+								"{{link}}"
+							],
+							"path": [
+								"admin",
+								"active-teacher",
+								"61f17f0e1229f0dacb41380b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Home",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWViNDJjODUxYTUxODQ5NTE4MTU0MmUiLCJpYXQiOjE2NDI4MDgwMTh9.ccJUiuzPHAss43IJFJZ7TqN8kFGVD7iMnF-VUA3VfQE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"email\":\"eahmad96@icloud.com\",\r\n    \"password\":\"1234567\",\r\n    \"userType\":\"teacher\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{link}}/login",
+							"host": [
+								"{{link}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ahmad\",\r\n    \"email\":\"test@test.com\",\r\n    \"password\":\"1234567\",\r\n    \"userType\":\"teacher\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resetPassword - Send Link",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"eahmad96@icloud.com\",\r\n    \"userType\":\"teacher\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/resetPassword",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"resetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset Password - Enter Data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\":\"1122334\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/resetPassword/S61ef28141e126f3efab4e66d/BYETEDFB5T83",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"resetPassword",
+								"S61ef28141e126f3efab4e66d",
+								"BYETEDFB5T83"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "TeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWYxN2YwZTEyMjlmMGRhY2I0MTM4MGIiLCJ0eXBlIjoidGVhY2hlciIsImlhdCI6MTY0MzIzMTE4OH0.er8JqD1Hvp07ZXb3Ow7V3jHWUCf8bNaaLivp_5ov0mA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/logout",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "student",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"mona\",\r\n    \"email\":\"monashazly225@gmail.com\",\r\n    \"password\":\"1234567\",\r\n     \"userType\":\"student\"\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \r\n     \"email\":\"monashazly225@gmail.com\",\r\n    \"password\":\"1234567\",\r\n     \"userType\":\"student\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditProfile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"monaaaas\",\r\n    \"password\":\"1472587\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/student/edit/61e95fe9f902d4f09e45a361",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"student",
+								"edit",
+								"61e95fe9f902d4f09e45a361"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer SeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWY0MjVmZWRkOWFlOTkxNDZkYmRiZmIiLCJ0eXBlIjoic3R1ZGVudCIsImlhdCI6MTY0MzM5MDQ3MX0.x75FKUHVOOGLXCTOgJmZO_g9k8ORuwzsClmoYiQE4mQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/student/profile/61f425fedd9ae99146dbdbfb",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"student",
+								"profile",
+								"61f425fedd9ae99146dbdbfb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add course",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJTNjFlZjAxYWY5ZGU4OWZiMWY0YmVmNDE1IiwidHlwZSI6InN0dWRlbnQiLCJpYXQiOjE2NDMwNTM0OTV9.NDqUIIrDxeBR_ixQWZ7NEurbxAAv7xa3zC334-6wUl8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/student/addcourse/61ef0a1b3a21da07cb9778f2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"student",
+								"addcourse",
+								"61ef0a1b3a21da07cb9778f2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletecourse",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJTNjFlZjAxYWY5ZGU4OWZiMWY0YmVmNDE1IiwidHlwZSI6InN0dWRlbnQiLCJpYXQiOjE2NDMwNTM0OTV9.NDqUIIrDxeBR_ixQWZ7NEurbxAAv7xa3zC334-6wUl8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/student/deletecourse/61eddd2a1682b8f8ad50274d",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"student",
+								"deletecourse",
+								"61eddd2a1682b8f8ad50274d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "allCourses",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJTNjFlZjAxYWY5ZGU4OWZiMWY0YmVmNDE1IiwidHlwZSI6InN0dWRlbnQiLCJpYXQiOjE2NDMwNTM0OTV9.NDqUIIrDxeBR_ixQWZ7NEurbxAAv7xa3zC334-6wUl8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/student/mycourses/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"student",
+								"mycourses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "teacher",
+			"item": [
+				{
+					"name": "teacherRegister",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"osama Ali\",\r\n    \"email\":\"osama@gmail.com\",\r\n    \"password\":\"123456789\",\r\n    \"userType\":\"teacher\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addSubject",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"math\",\r\n    \"description\":\"math is fun\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/admin/addSubject",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"addSubject"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addSubjectVideo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"link\":\"https://www.youtube.com/watch?v=B-OmJzOsCcY\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/teacher/postVideo/61e995fc972d5cb1e749e226",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teacher",
+								"postVideo",
+								"61e995fc972d5cb1e749e226"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteVideo",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "showTeacherProfile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "TeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWYxN2YwZTEyMjlmMGRhY2I0MTM4MGIiLCJ0eXBlIjoidGVhY2hlciIsImlhdCI6MTY0MzIxNjkzNX0.XYH0gAL7Oym7Q0XACkfkFGRgpVQz0UWpxAGyfILqwKA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/teacher/showTeacherProfile/61f17f0e1229f0dacb41380b",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teacher",
+								"showTeacherProfile",
+								"61f17f0e1229f0dacb41380b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editTeacherProfile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"shereen\",\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/teacher/editTeacherProfile/61f42cb38b809fae40e834a8",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teacher",
+								"editTeacherProfile",
+								"61f42cb38b809fae40e834a8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addTest",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "allCourses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/teacher/single/61ef06235c9c68ddbd9cf646",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teacher",
+								"single",
+								"61ef06235c9c68ddbd9cf646"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "single course",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

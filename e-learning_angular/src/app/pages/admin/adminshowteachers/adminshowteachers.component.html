@@ -1,0 +1,49 @@
+<table class="table table-bordered my-5 text-center" *ngIf="isloaded">
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>email</th>
+      <th>subjects</th>
+      <th>OTP Activation</th>
+      <th>Admin Activation</th>
+      <th>Blocked</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let teach of allTeachers">
+      <td>{{ teach.name }}</td>
+      <td>{{ teach.email }}</td>
+      <td>
+        <a routerLink="#" *ngFor="let sub of teach.subjects">
+          - {{ sub.name }} <br />
+        </a>
+      </td>
+      <td>
+        {{ teach.process.activationOTPStatus ? "Activated" : "not Activat" }}
+      </td>
+      <td>
+        {{ teach.process.activationAdmin ? "Activated" : "not Activat" }}
+      </td>
+      <td>{{ teach.process.blocked ? "Blocked" : "not Blocked" }}</td>
+      <td>
+        <a
+          routerLink="/admin/teacher/{{ teach._id }}"
+          class="btn btn-primary mx-1"
+          >Show</a
+        >
+        <a (click)="activeTeacher(teach._id)" class="btn btn-primary mx-1"
+          >Active</a
+        >
+        <a
+          routerLink="/admin/addteacher-subject/{{ teach._id }}"
+          class="btn btn-warning mx-1"
+          >Add subject</a
+        >
+        <a (click)="blockTeacher(teach._id)" class="btn btn-outline-danger mx-1"
+          >Block</a
+        >
+      </td>
+    </tr>
+  </tbody>
+</table>
